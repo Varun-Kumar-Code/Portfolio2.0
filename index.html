@@ -64,7 +64,7 @@
                 <img src="assets/images/It's me.jpg" alt="Varun Kumar">
             </div>
         </section>
-
+        
         <section class="about">
             <div class="about-image" data-aos="fade-right">
                 <img src="assets/images/profile1.PNG" alt="Varun Kumar">
@@ -80,45 +80,140 @@
                 <a data-aos="fade-up" href="about.html" class="btn">More About Me</a>
             </div>
         </section>
-
+        
         <section class="services" id="services">
             <div class="services-text" data-aos="fade-up">
                 <h2>My <span>Services</span></h2>
             </div>
             <div class="services-container">
+                <!-- UI/UX Design -->
                 <div class="service-box" data-aos="fade-up">
-                    <div class="service-icon"><!--⚙️-->
+                    <div class="service-icon">
                         <img src="assets/images/UI.png" alt="UI/UX" data-aos="fade-up">
                     </div>
                     <h3 style="font-weight: 500;">UI/UX Design</h3>
                     <p style="text-align:center;" data-aos="fade-up">Crafting user-friendly and visually engaging
                         digital experiences.</p>
-                    <a href="#" class="btn">learn more</a>
+                    <a href="#" class="btn" data-target="uiux-overlay">learn more</a>
                 </div>
 
+                <!-- Web Design -->
                 <div class="service-box" data-aos="fade-up">
-                    <div class="service-icon"><!--💻-->
+                    <div class="service-icon">
                         <img src="assets/images/front-end.png" alt="Web design" data-aos="fade-up">
                     </div>
                     <h3 style="font-weight: 500;">Web Design</h3>
                     <p style="text-align:center;" data-aos="fade-up">Building modern, responsive, and user-friendly
                         websites.</p>
-                    <a href="#" class="btn">learn more</a>
+                    <a href="#" class="btn" data-target="web-overlay">learn more</a>
                 </div>
 
+                <!-- App Design -->
                 <div class="service-box" data-aos="fade-up">
-                    <div class="service-icon"><!--📱-->
+                    <div class="service-icon">
                         <img src="assets/images/user-interface.png" alt="App design" data-aos="fade-up">
                     </div>
                     <h3 style="font-weight: 500;">App Design</h3>
                     <p style="text-align:center;" data-aos="fade-up">Designing seamless, functional, and aesthetic
                         mobile app interfaces.</p>
-                    <a href="#" class="btn">learn more</a>
+                    <a href="#" class="btn" data-target="app-overlay">learn more</a>
+                </div>
+            </div>
+
+            <!-- Overlay for UI/UX Design -->
+            <div class="overlay" id="uiux-overlay">
+                <div class="overlay-content">
+                    <button class="close-btn">&times;</button>
+                    <br>
+                    <div class="overlay-details">
+                        <img src="https://elito-next.netlify.app/images/service-single/ux/img-1.jpg" alt="UI/UX">
+                        <h2>UI/UX Design</h2>
+                        <p>Our UI/UX design services focus on creating intuitive and visually appealing interfaces that
+                            enhance user satisfaction. We conduct thorough user research, create wireframes, and design
+                            prototypes to ensure a seamless user experience.</p>
+                        <div class="sample">
+                            <img src="assets\images\E-commerce website.png" alt="UI/UX sample 1">
+                            <img src="assets/images/Mobile app signup flow.png" alt="UI/UX sample 2">
+                        </div>
+                        <p>Key features include:</p>
+                        <ul>
+                            <li>User research and personas</li>
+                            <li>Wireframing and prototyping</li>
+                            <li>Visual design and interaction design</li>
+                            <li>Usability testing</li>
+                            <li>Responsive design for all devices</li>
+                            <li>Accessibility compliance</li>
+                            <li>Design system development</li>
+                            <li>Continuous user feedback integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlay for Web Design -->
+            <div class="overlay" id="web-overlay">
+                <div class="overlay-content">
+                    <button class="close-btn">&times;</button>
+                    <br>
+                    <div class="overlay-details">
+                        <img src="https://elito-next.netlify.app/images/service-single/development/img-3.jpg"
+                            alt="UI/UX">
+                        <h2>Web Design</h2>
+                        <p>Our web design services deliver modern, responsive, and user-friendly websites tailored to
+                            your brand. We combine creativity with technical expertise to build websites that perform
+                            across all devices.</p>
+                        <div class="sample">
+                            <img src="assets\images\TouchToTouch.png" alt="Web development sample 1">
+                            <img src="assets\images\ATS Resume Analyzer.png" alt="Web development sample 2">
+                        </div>
+                        <p>Key features include:</p>
+                        <ul>
+                            <li>Custom website design</li>
+                            <li>Responsive layouts</li>
+                            <li>SEO optimization</li>
+                            <li>Fast loading times</li>
+                            <li>Integration with CMS platforms</li>
+                            <li>E-commerce solutions</li>
+                            <li>Secure hosting setup</li>
+                            <li>Ongoing maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlay for App Design -->
+            <div class="overlay" id="app-overlay">
+                <div class="overlay-content">
+                    <button class="close-btn">&times;</button>
+                    <br>
+                    <div class="overlay-details">
+                        <img src="https://elito-next.netlify.app/images/service-single/ux/img-1.jpg" alt="UI/UX">
+                        <h2>App Design</h2>
+                        <p>Our app design services create seamless, functional, and aesthetically pleasing mobile app
+                            interfaces. We focus on user-centric design to ensure your app is both engaging and easy to
+                            use.</p>
+                        <div class="sample">
+                            <img src="assets\images\Restaurant_app.png" alt="App Design sample 1">
+                            <img src="https://elito-next.netlify.app/images/service-single/app/img-3.jpg"
+                                alt="App Design sample 2">
+                        </div>
+                        <p>Key features include:</p>
+                        <ul>
+                            <li>Mobile-first design</li>
+                            <li>Cross-platform compatibility</li>
+                            <li>Interactive prototypes</li>
+                            <li>App store optimization</li>
+                            <li>User flow mapping</li>
+                            <li>Custom icon design</li>
+                            <li>Performance optimization</li>
+                            <li>Regular updates and support</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section id="Skill">
             <div class="skills-section" id="skills" data-aos="fade-up">
                 <center>
                     <h2 class="skill-set skills-head">Ski<span>lls</span></h2>
@@ -296,6 +391,40 @@
             </div>
         </footer>
     </div>
+
+
+
+    <script>
+        const learnMoreButtons = document.querySelectorAll('.btn');
+        const overlays = document.querySelectorAll('.overlay');
+
+        learnMoreButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const targetOverlayId = button.getAttribute('data-target');
+                const targetOverlay = document.getElementById(targetOverlayId);
+                targetOverlay.style.display = 'flex'; // Show the overlay
+            });
+        });
+
+        const closeButtons = document.querySelectorAll('.close-btn');
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.closest('.overlay').style.display = 'none';
+            });
+        });
+
+        overlays.forEach(overlay => {
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    overlay.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
