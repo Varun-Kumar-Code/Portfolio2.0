@@ -622,14 +622,14 @@ header {
   align-items: center;
   justify-content: center;
   margin: auto;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
   height: 400px;
   width: auto;
   max-width: 760px;
 }
 
 .overlay-details h2{
-  font-size: 30px !important;
+  font-size: 25px !important;
   text-align: center;
   text-transform: none;
 }
