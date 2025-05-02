@@ -442,6 +442,9 @@ header {
   border-radius: 10px;
   transition: background-color 0.3s;
 }
+.cus-btn{
+  border-radius: 10px !important;
+}
 
 .btn:hover {
   background-color: #00c4ff;
@@ -585,6 +588,7 @@ header {
   text-decoration: none;
   border-radius: 5px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .btn:hover {
