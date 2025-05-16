@@ -773,6 +773,9 @@ header {
   .overlay-content{
     font-size: 12.5px !important;
   }
+  .overlay-details::-webkit-scrollbar, .overlay-details::-webkit-scrollbar-thumb, .overlay-details::-webkit-scrollbar-track {
+    visibility:hidden !important;
+  }
 
 
 
