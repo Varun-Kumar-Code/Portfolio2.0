@@ -26,7 +26,8 @@
             <nav>
                 <div class="nav__header">
                     <div class="nav__logo">
-                        <a class="link" href="#"><span style="color: #3165f4;"> < </span> Varun <span style="color: #3165f4;"> > </span></a>
+                        <a class="link" href="#"><span style="color: #3165f4;">
+                                < </span> Varun <span style="color: #3165f4;"> > </span></a>
                     </div>
                     <div class="nav__menu__btn" id="menu-btn">
                         <i class="ri-menu-line"></i>
@@ -351,26 +352,24 @@
                 </div>
 
                 <div class="contact-form">
-                    <form action="#">
+                    <form id="contactForm">
                         <label data-aos="fade-up" for="name">Name</label>
-                        <input data-aos="fade-up" type="text" id="name" placeholder="Varun Kumar *" required>
-
-                        <label data-aos="fade-up" for="email">Email</label>
-                        <input data-aos="fade-up" type="email" id="email" placeholder="varunkumar1329@gmail.com *"
+                        <input data-aos="fade-up" type="text" id="name" name="name" placeholder="Varun Kumar *"
                             required>
-
+                        <label data-aos="fade-up" for="email">Email</label>
+                        <input data-aos="fade-up" type="email" id="email" name="email"
+                            placeholder="varunkumar1329@gmail.com *" required>
                         <label data-aos="fade-up" for="message">Message</label>
-                        <textarea data-aos="fade-up" id="message" placeholder="Hello Varun Kumar, *"
+                        <textarea data-aos="fade-up" id="message" name="message" placeholder="Hello Varun Kumar, *"
                             required></textarea>
-
                         <button data-aos="fade-up" type="submit" class="btn">Submit</button>
                     </form>
                 </div>
             </div>
         </section>
-        
-        
-        
+
+
+
         <footer>
             <div class="footer-container">
                 <div class="copyrights">
@@ -396,6 +395,33 @@
         </footer>
     </div>
 
+
+    <!-- Add EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your User ID
+        emailjs.init("x-nXrfUryHZDu9QOK"); // Replace with your EmailJS User ID
+
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            // Send email using EmailJS
+            emailjs.send("service_jgjgbhq", "template_yw5juwg", formData)
+                .then(function (response) {
+                    alert('Submitted! Thank you for your message.');
+                    document.getElementById('contactForm').reset(); // Clear the form
+                }, function (error) {
+                    alert('Failed to send message. Please try again. Error: ' + JSON.stringify(error));
+                });
+        });
+    </script>
 
 
     <script>

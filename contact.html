@@ -25,7 +25,8 @@
         <nav>
             <div class="nav__header">
                 <div class="nav__logo">
-                    <a class="link" href="#"><span style="color: #3165f4;"> < </span> Varun <span style="color: #3165f4;"> > </span></a>
+                    <a class="link" href="#"><span style="color: #3165f4;">
+                            < </span> Varun <span style="color: #3165f4;"> > </span></a>
                 </div>
                 <div class="nav__menu__btn" id="menu-btn">
                     <i class="ri-menu-line"></i>
@@ -49,13 +50,13 @@
     <section class="contact" id="contact">
         <div class="contact-content">
             <div class="contact-form">
-                <form action="#">
-                    <label>Name</label>
-                    <input type="text" placeholder="Varun Kumar *" required>
-                    <label>Email</label>
-                    <input type="email" placeholder="varunkumar1329@gmail.com *" required>
-                    <label>Message</label>
-                    <textarea placeholder="Hello Varun Kumar, *" required></textarea>
+                <form id="contactForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Varun Kumar *" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="varunkumar1329@gmail.com *" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Hello Varun Kumar, *" required></textarea>
                     <button type="submit" class="btn">Submit</button>
                 </form>
             </div>
@@ -87,6 +88,33 @@
         </div>
     </footer>
 
+
+    <!-- Add EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your User ID
+        emailjs.init("x-nXrfUryHZDu9QOK"); // Replace with your EmailJS User ID
+
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            // Send email using EmailJS
+            emailjs.send("service_jgjgbhq", "template_yw5juwg", formData)
+                .then(function (response) {
+                    alert('Submitted! Thank you for your message.');
+                    document.getElementById('contactForm').reset(); // Clear the form
+                }, function (error) {
+                    alert('Failed to send message. Please try again. Error: ' + JSON.stringify(error));
+                });
+        });
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
