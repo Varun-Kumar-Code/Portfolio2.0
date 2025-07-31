@@ -25,7 +25,8 @@
         <nav>
             <div class="nav__header">
                 <div class="nav__logo">
-                    <a class="link" href="#"><span style="color: #3165f4;"> < </span> Varun <span style="color: #3165f4;"> > </span></a>
+                    <a class="link" href="#"><span style="color: #3165f4;">
+                            < </span> Varun <span style="color: #3165f4;"> > </span></a>
                 </div>
                 <div class="nav__menu__btn" id="menu-btn">
                     <i class="ri-menu-line"></i>
@@ -74,6 +75,18 @@
     <br>
 
 
+    <!-- Top Button -->
+    <div class="footer-left" hidden>
+        <button onclick="scrollToTop()">Back to Top</button>
+    </div>
+    <button class="top-button" onclick="scrollToTop()">
+        <svg class="svgIcon " viewBox="0 0 384 512">
+            <path
+                d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+            </path>
+        </svg>
+    </button>
+
     <footer>
         <div class="footer-container">
             <div class="copyrights">
@@ -98,7 +111,11 @@
         </div>
     </footer>
 
-
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
